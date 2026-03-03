@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20260303 13:57:00.283" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20260303 14:06:00.488" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="/Users/anandyadav/Desktop/Automation/robotframework/automation/test.robot">
 <test id="s1-t1" name="Automation Practice" line="16">
 <kw name="open the url" library="resource" type="SETUP">
@@ -7,44 +7,46 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260303 13:57:00.674" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
-<status status="PASS" starttime="20260303 13:57:00.673" endtime="20260303 13:57:05.782"/>
+<msg timestamp="20260303 14:06:00.854" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
+<status status="PASS" starttime="20260303 14:06:00.853" endtime="20260303 14:06:06.175"/>
 </kw>
-<status status="PASS" starttime="20260303 13:57:00.673" endtime="20260303 13:57:05.783"/>
+<status status="PASS" starttime="20260303 14:06:00.853" endtime="20260303 14:06:06.176"/>
 </kw>
 <kw name="open web application">
+<arg>${username}</arg>
+<arg>${password}</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:a[href="/login"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260303 13:57:05.785" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
-<status status="PASS" starttime="20260303 13:57:05.784" endtime="20260303 13:57:06.703"/>
+<msg timestamp="20260303 14:06:06.178" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<status status="PASS" starttime="20260303 14:06:06.177" endtime="20260303 14:06:08.789"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input[name="email"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260303 13:57:06.705" level="INFO">Typing text 'test007@gmail.com' into text field 'css:input[name="email"]'.</msg>
-<status status="PASS" starttime="20260303 13:57:06.704" endtime="20260303 13:57:07.362"/>
+<msg timestamp="20260303 14:06:08.792" level="INFO">Typing text 'test007@gmail.com' into text field 'css:input[name="email"]'.</msg>
+<status status="PASS" starttime="20260303 14:06:08.790" endtime="20260303 14:06:09.121"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input[name="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260303 13:57:07.363" level="INFO">Typing text 'test@007' into text field 'css:input[name="password"]'.</msg>
-<status status="PASS" starttime="20260303 13:57:07.362" endtime="20260303 13:57:07.537"/>
+<msg timestamp="20260303 14:06:09.122" level="INFO">Typing text 'test@007' into text field 'css:input[name="password"]'.</msg>
+<status status="PASS" starttime="20260303 14:06:09.122" endtime="20260303 14:06:09.205"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button[data-qa="login-button"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260303 13:57:07.538" level="INFO">Clicking element 'css:button[data-qa="login-button"]'.</msg>
-<status status="PASS" starttime="20260303 13:57:07.537" endtime="20260303 13:57:07.678"/>
+<msg timestamp="20260303 14:06:09.206" level="INFO">Clicking element 'css:button[data-qa="login-button"]'.</msg>
+<status status="PASS" starttime="20260303 14:06:09.205" endtime="20260303 14:06:12.134"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${logout_button}</arg>
 <arg>timeout=5s</arg>
 <arg>error=Logout button is not visible and login failed</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260303 13:57:07.679" endtime="20260303 13:57:10.827"/>
+<status status="PASS" starttime="20260303 14:06:12.135" endtime="20260303 14:06:12.157"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <var>${status}</var>
@@ -55,44 +57,44 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${logout_button}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260303 13:57:10.838" level="INFO">Element 'css:a[href="/logout"]' is displayed.</msg>
-<status status="PASS" starttime="20260303 13:57:10.827" endtime="20260303 13:57:10.838"/>
+<msg timestamp="20260303 14:06:12.169" level="INFO">Element 'css:a[href="/logout"]' is displayed.</msg>
+<status status="PASS" starttime="20260303 14:06:12.158" endtime="20260303 14:06:12.169"/>
 </kw>
-<msg timestamp="20260303 13:57:10.838" level="INFO">${status} = PASS</msg>
-<msg timestamp="20260303 13:57:10.838" level="INFO">${error_msg} = None</msg>
-<status status="PASS" starttime="20260303 13:57:10.827" endtime="20260303 13:57:10.838"/>
+<msg timestamp="20260303 14:06:12.169" level="INFO">${status} = PASS</msg>
+<msg timestamp="20260303 14:06:12.169" level="INFO">${error_msg} = None</msg>
+<status status="PASS" starttime="20260303 14:06:12.157" endtime="20260303 14:06:12.169"/>
 </kw>
 <if>
 <branch type="IF" condition="'${status}' == 'PASS'">
 <kw name="Set Test Message" library="BuiltIn">
 <arg>SUCCESS: Element is present on screen.</arg>
 <doc>Sets message for the current test case.</doc>
-<msg timestamp="20260303 13:57:10.839" level="INFO">Set test message to:
+<msg timestamp="20260303 14:06:12.169" level="INFO">Set test message to:
 SUCCESS: Element is present on screen.</msg>
-<status status="PASS" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+<status status="PASS" starttime="20260303 14:06:12.169" endtime="20260303 14:06:12.169"/>
 </kw>
-<status status="PASS" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+<status status="PASS" starttime="20260303 14:06:12.169" endtime="20260303 14:06:12.169"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Test Message" library="BuiltIn">
 <arg>FAILURE: Element was missing. System said: ${error_msg}</arg>
 <arg>level=WARN</arg>
 <doc>Sets message for the current test case.</doc>
-<status status="NOT RUN" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+<status status="NOT RUN" starttime="20260303 14:06:12.170" endtime="20260303 14:06:12.170"/>
 </kw>
-<status status="NOT RUN" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+<status status="NOT RUN" starttime="20260303 14:06:12.169" endtime="20260303 14:06:12.170"/>
 </branch>
-<status status="PASS" starttime="20260303 13:57:10.838" endtime="20260303 13:57:10.839"/>
+<status status="PASS" starttime="20260303 14:06:12.169" endtime="20260303 14:06:12.170"/>
 </if>
-<status status="PASS" starttime="20260303 13:57:05.783" endtime="20260303 13:57:10.839"/>
+<status status="PASS" starttime="20260303 14:06:06.176" endtime="20260303 14:06:12.170"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260303 13:57:10.839" endtime="20260303 13:57:11.060"/>
+<status status="PASS" starttime="20260303 14:06:12.170" endtime="20260303 14:06:12.403"/>
 </kw>
-<status status="PASS" starttime="20260303 13:57:00.672" endtime="20260303 13:57:11.060">SUCCESS: Element is present on screen.</status>
+<status status="PASS" starttime="20260303 14:06:00.852" endtime="20260303 14:06:12.403">SUCCESS: Element is present on screen.</status>
 </test>
-<status status="PASS" starttime="20260303 13:57:00.286" endtime="20260303 13:57:11.061"/>
+<status status="PASS" starttime="20260303 14:06:00.490" endtime="20260303 14:06:12.404"/>
 </suite>
 <statistics>
 <total>
@@ -105,7 +107,7 @@ SUCCESS: Element is present on screen.</msg>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20260303 13:57:00.671" level="ERROR">Error in file '/Users/anandyadav/Desktop/Automation/robotframework/automation/test.robot' on line 3: Importing library 'Browser' failed: ModuleNotFoundError: No module named 'Browser'
+<msg timestamp="20260303 14:06:00.850" level="ERROR">Error in file '/Users/anandyadav/Desktop/Automation/robotframework/automation/test.robot' on line 3: Importing library 'Browser' failed: ModuleNotFoundError: No module named 'Browser'
 Traceback (most recent call last):
   None
 PYTHONPATH:
