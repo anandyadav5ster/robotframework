@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20260303 13:57:00.283" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="/Users/anandyadav/Desktop/Automation/robotframework/automation/test.robot">
+<test id="s1-t1" name="Automation Practice" line="16">
+<kw name="open the url" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260303 13:57:00.674" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
+<status status="PASS" starttime="20260303 13:57:00.673" endtime="20260303 13:57:05.782"/>
+</kw>
+<status status="PASS" starttime="20260303 13:57:00.673" endtime="20260303 13:57:05.783"/>
+</kw>
+<kw name="open web application">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a[href="/login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260303 13:57:05.785" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<status status="PASS" starttime="20260303 13:57:05.784" endtime="20260303 13:57:06.703"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name="email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260303 13:57:06.705" level="INFO">Typing text 'test007@gmail.com' into text field 'css:input[name="email"]'.</msg>
+<status status="PASS" starttime="20260303 13:57:06.704" endtime="20260303 13:57:07.362"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260303 13:57:07.363" level="INFO">Typing text 'test@007' into text field 'css:input[name="password"]'.</msg>
+<status status="PASS" starttime="20260303 13:57:07.362" endtime="20260303 13:57:07.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button[data-qa="login-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260303 13:57:07.538" level="INFO">Clicking element 'css:button[data-qa="login-button"]'.</msg>
+<status status="PASS" starttime="20260303 13:57:07.537" endtime="20260303 13:57:07.678"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logout_button}</arg>
+<arg>timeout=5s</arg>
+<arg>error=Logout button is not visible and login failed</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260303 13:57:07.679" endtime="20260303 13:57:10.827"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${status}</var>
+<var>${error_msg}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${logout_button}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${logout_button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20260303 13:57:10.838" level="INFO">Element 'css:a[href="/logout"]' is displayed.</msg>
+<status status="PASS" starttime="20260303 13:57:10.827" endtime="20260303 13:57:10.838"/>
+</kw>
+<msg timestamp="20260303 13:57:10.838" level="INFO">${status} = PASS</msg>
+<msg timestamp="20260303 13:57:10.838" level="INFO">${error_msg} = None</msg>
+<status status="PASS" starttime="20260303 13:57:10.827" endtime="20260303 13:57:10.838"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
+<kw name="Set Test Message" library="BuiltIn">
+<arg>SUCCESS: Element is present on screen.</arg>
+<doc>Sets message for the current test case.</doc>
+<msg timestamp="20260303 13:57:10.839" level="INFO">Set test message to:
+SUCCESS: Element is present on screen.</msg>
+<status status="PASS" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+</kw>
+<status status="PASS" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Test Message" library="BuiltIn">
+<arg>FAILURE: Element was missing. System said: ${error_msg}</arg>
+<arg>level=WARN</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="NOT RUN" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+</kw>
+<status status="NOT RUN" starttime="20260303 13:57:10.839" endtime="20260303 13:57:10.839"/>
+</branch>
+<status status="PASS" starttime="20260303 13:57:10.838" endtime="20260303 13:57:10.839"/>
+</if>
+<status status="PASS" starttime="20260303 13:57:05.783" endtime="20260303 13:57:10.839"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260303 13:57:10.839" endtime="20260303 13:57:11.060"/>
+</kw>
+<status status="PASS" starttime="20260303 13:57:00.672" endtime="20260303 13:57:11.060">SUCCESS: Element is present on screen.</status>
+</test>
+<status status="PASS" starttime="20260303 13:57:00.286" endtime="20260303 13:57:11.061"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260303 13:57:00.671" level="ERROR">Error in file '/Users/anandyadav/Desktop/Automation/robotframework/automation/test.robot' on line 3: Importing library 'Browser' failed: ModuleNotFoundError: No module named 'Browser'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/3.11/bin
+  /Library/Frameworks/Python.framework/Versions/3.11/lib/python311.zip
+  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11
+  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages</msg>
+</errors>
+</robot>
